@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(to bottom, #000428, #004e92);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: #ffffff;
+      background: #6b0f1a;
+      background: linear-gradient(to right, #6b0f1a, #b91372);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+       animation: moveButton 5s linear infinite;
+       position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes moveButton {
+      0% {
+        transform: translateX(-500%);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    p.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>༘⋆₊ ⊹★🔭๋࣭ ⭑⋆｡˚</h1>
+    <h1> Catch this Button To Know some facts About space</h1><br>
+    <h1>˚　　　　✦　　　.　　. 🪐　 ˚　.　　　　 　　.　　　　　　 ✦　　　.　　˚　🌒　　　　. ✦ 　🌍  
+ 　　.  　 　　　˚　　　　　*　　 　　✦　　　.　　.　　　✦　　˚ 　　　 　　˚　.　*　　. 　˚　　.</h1>
+    <button id="messageButton" margin>Tapp Me</button>
+   
+    <p id="messageDisplay"></p>
+        <h3>💫                 .         .
+⠀⠀⠀⠀⠀⠀⠀.　　　. . .　　　　　　　　　　. 　　　　　　　　　　✨　　　　　★ 　　　　　✩°｡ ⋆　　　　　.　　.
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀☀️
+　　　　　　*　　　　　　　　　　　.
+.　　🪐　　　　　　　. 　　⠀　　　　   ,　　　　　　　　　🌟
+　　　　　⠀　　　　⠀　　⭐︎
+⠀⠀⠀⠀⠀⠀⠀⠀✨⠀⠀⠀⠀.　　　　　　　⠀　　　⠀.　
+　　★　　　⠀　⠀　　,　　　　　　.
+　　　　　　　　　　　　　.
+　　　　　　*⠀　☄️　⠀　　　　　⠀⭐︎
+　　✩° ｡　　　✨　　　　　　　　　　　　　.
+　　　　.　　　　.　　　⠀🌑
+　　　　　　　　　　　.
+　　　　　　　🚀
+　　　˚　　　　　　　　ﾟ　✩°｡ ⋆　　　　.
+　.⠀　　🌎⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,
+　　　*　　⠀.
+　　　　　.　　　　　　　✨　　　⠀★
+　˚　　　　　　　　　　　　　　
+★⠀ 　　　　　　　　　　.　　　　　　　　
+　　　　　⭐︎</h3>
+  </div>
+ 
+ 
+  
+
+  <script>
+     const messages = [
+      "The universe is vast and full of wonders.",
+      "Did you know? There are more stars in the universe than grains of sand on Earth!",
+      "Black holes are regions of spacetime where gravity is so strong, not even light can escape.",
+      "The Milky Way galaxy is 100,000 light-years across.",
+      "Exploration is the key of humanity—dream big!"
+    ];
+
+    const button = document.getElementById('messageButton');
+    const messageDisplay = document.getElementById('messageDisplay');
+    let messageIndex = 0;
+
+    button.addEventListener('click', () => {
+      messageDisplay.textContent = messages[messageIndex];
+      messageDisplay.classList.add('visible');
+      messageIndex = (messageIndex + 1) % messages.length;
+    });
+  </script>
+</body>
+</html>
